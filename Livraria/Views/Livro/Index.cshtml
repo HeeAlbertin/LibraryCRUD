@@ -1,0 +1,47 @@
+﻿<h2>Livros</h2>
+
+<div ng-controller="LivroCtrl as vm">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Título</th>
+                <th scope="col">Subtítulo</th>
+                <th scope="col">Edição</th>
+                <th scope="col">Ano</th>
+                <th scope="col">Nº de Páginas</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Idioma</th>
+                <th scope="col" class="text-center">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="book in vm.books">
+                <td class="breakLine">{{ book.Id }}</td>
+                <td class="breakLine">{{ book.Titulo }}</td>
+                <td class="breakLine">{{ book.Subtitulo }}</td>
+                <td class="breakLine">{{ book.Edicao }}</td>
+                <td class="breakLine">{{ book.Ano }}</td>
+                <td class="breakLine">{{ book.Paginas }}</td>
+                <td class="breakLine">{{ book.Preco }}</td>
+                <td class="breakLine">
+                    <span ng-show="book.Idioma == 0">Português</span>
+                    <span ng-show="book.Idioma == 1">Espanhol</span>
+                    <span ng-show="book.Idioma == 2">Inglês</span>
+                </td>
+                <td class="breakLine text-center">
+                    <a class="btn btn-sm btn-warning" ng-click="edit(book.Id)">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    <a class="btn btn-sm btn-danger"
+                            ng-click="vm.deleteBook(book.Id)"
+                            confirm-action="Confirma a exclusão?">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="loader" ng-show="loading"></div>
+    <label ng-show="noData" class="nodata">Nenhum livro cadastrado.</label>
+</div>
