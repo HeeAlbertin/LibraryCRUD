@@ -13,5 +13,11 @@ namespace Livraria.Controllers
         {
             return View();
         }
+
+        // GET: Livro/NovoLivro
+        public ActionResult NovoLivro()
+        {
+            return View();
+        }
     }
 }

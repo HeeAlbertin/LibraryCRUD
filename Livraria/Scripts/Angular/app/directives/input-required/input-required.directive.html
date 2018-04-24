@@ -1,0 +1,15 @@
+﻿<div class="form-group" ng-class="{ 'has-warning' : form.$submitted && form.{{nome}}.$invalid }">
+    <label for="{{ bookTitle }}"
+           ng-class="{ 'input-required' : form.$submitted && form.{{nome}}.$invalid }">{{ descricao }}*</label>
+    <input type="{{ tipo }}"
+           class="form-control"
+           id="{{ id }}"
+           name="{{ nome }}"
+           placeholder="{{ placeholder }}"
+           ng-model="modelo"
+           ng-minlength="{{ minLength || undefined }}"
+           maxlength="{{ maxLength || undefined }}"
+           ng-pattern="{{ pattern || undefined }}" 
+           step="{{ decimalStep || undefined }}"
+           required />
+</div>

@@ -24,6 +24,7 @@ namespace Livraria
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/Angular/livro.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Cadastro de Livros</title>
@@ -17,12 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Cadastro de Livros", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="/#/Livro">Livros</a></li>
-                </ul>
+                @Html.ActionLink("Cadastro de Livros", "Index", "Livro", new { area = "" }, new { @class = "navbar-brand" })
             </div>
         </div>
     </div>
@@ -39,8 +34,8 @@
     <script src="~/Scripts/Angular/app/app.constants.js"></script>
     <script src="~/Scripts/Angular/app/factories/api-call.factory.js"></script>
     <script src="~/Scripts/Angular/app/directives/confirm-action-click.directive.js"></script>
+    <script src="~/Scripts/Angular/app/directives/input-required/input-required.directive.js"></script>
     <!-- End Angular main files -->
-
     <!-- Livro Module -->
     <script src="~/Scripts/Angular/livro/livro.module.js"></script>
     <script src="~/Scripts/Angular/livro/livro.config.js"></script>

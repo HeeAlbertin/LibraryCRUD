@@ -1,0 +1,95 @@
+﻿<h2>Novo Livro</h2>
+
+<div ng-controller="LivroCtrl as vm">
+    <form name="bookForm" ng-submit="vm.saveBook(bookForm);" novalidate>
+        <input-required nome="titulo"
+                        descricao="Título"
+                        modelo="vm.bookForm.titulo"
+                        id="bookTitle"
+                        placeholder="Nome do Livro"
+                        form="bookForm"
+                        tipo="text"
+                        max-length="200"></input-required>
+
+        <div class="form-group">
+            <label for="bookSubtitle">Subtítulo</label>
+            <input type="text"
+                   class="form-control"
+                   id="bookSubtitle"
+                   name="subtitulo"
+                   placeholder="Subtítulo do Livro"
+                   ng-model="vm.bookForm.subtitulo"
+                   maxlength="200" />
+        </div>
+
+        <input-required nome="edicao"
+                        descricao="Edição"
+                        modelo="vm.bookForm.edicao"
+                        id="bookEdition"
+                        placeholder="Número da Edição"
+                        form="bookForm"
+                        tipo="number"
+                        min-length="0"></input-required>
+
+        <input-required nome="ano"
+                        descricao="Ano"
+                        modelo="vm.bookForm.ano"
+                        id="bookYear"
+                        placeholder="Ano de Publicação"
+                        form="bookForm"
+                        tipo="number"
+                        min-length="0"></input-required>
+
+        <input-required nome="paginas"
+                        descricao="Número de Páginas"
+                        modelo="vm.bookForm.paginas"
+                        id="bookPages"
+                        placeholder="Número de Páginas"
+                        form="bookForm"
+                        tipo="number"
+                        min-length="0"></input-required>
+
+        <input-required nome="preco"
+                        descricao="Preço do Livro"
+                        modelo="vm.bookForm.preco"
+                        id="bookPrice"
+                        placeholder="Preço do Livro"
+                        form="bookForm"
+                        tipo="number"
+                        min-length="0"></input-required>
+
+        <input-required nome="editora"
+                        descricao="Editora"
+                        modelo="vm.bookForm.editora"
+                        id="bookPrice"
+                        placeholder="Nome da Editora"
+                        form="bookForm"
+                        maxlength="200"
+                        tipo="text"></input-required>
+
+        <div class="form-group">
+            <label for="bookLanguage" ng-class="{ 'input-required' : bookForm.$submitted && bookForm.idioma.$invalid }">Idioma *</label>
+            <select id="bookLanguage"
+                    name="idioma"
+                    ng-model="vm.bookForm.idioma"
+                    class="form-control"
+                    form="bookForm"
+                    required>
+                <option value="">Selecione um Idioma</option>
+                <option value="0">Português</option>
+                <option value="1">Espanhol</option>
+                <option value="2">Inglês</option>
+            </select>
+        </div>
+
+        <div>
+            <small class="form-text text-muted">Campos com '*' são obrigatórios</small>
+        </div>
+
+        <div>
+            <button class="btn button btn-primary" type="submit">
+                <i class="glyphicon glyphicon-ok"></i> Cadastrar
+            </button>
+        </div>
+    </form>
+</div>

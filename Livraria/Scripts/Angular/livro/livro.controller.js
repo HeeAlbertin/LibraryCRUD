@@ -5,13 +5,16 @@
         .module('app.livro')
         .controller('LivroCtrl', livroCtrl);
 
-    livroCtrl.$inject = ['$scope', 'apiCall'];
+    livroCtrl.$inject = ['$scope', 'apiCall', '$window'];
 
-    function livroCtrl($scope, apiCall) {
+    function livroCtrl($scope, apiCall, $window) {
         var vm = this;
 
         vm.books = {};
+        vm.bookForm = {};
         vm.deleteBook = deleteBook;
+        vm.newBook = newBook;
+        vm.saveBook = saveBook;
 
         loadBooks();
 
@@ -19,7 +22,6 @@
             apiCall.getBooks().then(
                 function (response) {
                     vm.books = response;
-                    console.log(vm.books);
                 }
             );
         }
@@ -31,6 +33,17 @@
                     loadBooks();
                 }
             );
+        }
+
+        function newBook() {
+            $window.location.href = '/Livro/NovoLivro'
+        }
+
+        function saveBook(form) {
+            if (form.$valid) {
+                console.log(vm.bookForm);
+                apiCall.saveBook(vm.bookForm);
+            }
         }
     }
 })();

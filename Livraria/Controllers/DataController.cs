@@ -25,5 +25,12 @@ namespace Library.Controllers
             livrariaEntities.Livro.Remove(book);
             livrariaEntities.SaveChanges();
         }
+
+        // POST api/data
+        public void Create([FromBody] Livro newBook)
+        {
+            livrariaEntities.Livro.Add(newBook);
+            livrariaEntities.SaveChanges();
+        }
     }
 }
