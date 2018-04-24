@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LivrariaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Livro">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Subtitulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Edicao" Type="Byte" Nullable="false" />
+    <Property Name="Ano" Type="Int32" Nullable="false" />
+    <Property Name="Paginas" Type="Int32" Nullable="false" />
+    <Property Name="Preco" Type="Double" Nullable="false" />
+    <Property Name="Editora" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Idioma" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="LivrariaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Livro" EntityType="Self.Livro" />
+  </EntityContainer>
+</Schema>
