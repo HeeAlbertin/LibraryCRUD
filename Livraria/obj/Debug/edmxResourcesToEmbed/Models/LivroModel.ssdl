@@ -6,7 +6,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Titulo" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="Subtitulo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Subtitulo" Type="varchar" MaxLength="200" />
     <Property Name="Edicao" Type="tinyint" Nullable="false" />
     <Property Name="Ano" Type="int" Nullable="false" />
     <Property Name="Paginas" Type="int" Nullable="false" />

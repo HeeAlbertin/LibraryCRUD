@@ -5,12 +5,11 @@
         .module('app.livro')
         .config(livroConfig);
 
-    livroConfig.$inject = ['$routeProvider', '$locationProvider'];
+    livroConfig.$inject = ['$routeProvider'];
 
-    function livroConfig($routeProvider, $locationProvider) {
-        console.log('config');
+    function livroConfig($routeProvider) {
         $routeProvider
-            .when('/Livro', {
+            .when('/Livro/:id', {
                 templateUrl: 'Livro/Index',  
                 controller: 'LivroCtrl',
                 controllerAs: 'vm'

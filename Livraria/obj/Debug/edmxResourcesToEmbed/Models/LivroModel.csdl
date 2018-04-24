@@ -6,7 +6,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Titulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Subtitulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Subtitulo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="Edicao" Type="Byte" Nullable="false" />
     <Property Name="Ano" Type="Int32" Nullable="false" />
     <Property Name="Paginas" Type="Int32" Nullable="false" />

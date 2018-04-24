@@ -10,8 +10,10 @@
     function api($q, $http, constants) {
         var service = {
             'getBooks': getBooks,
+            'getOneBook': getOneBook,
             'deleteBook': deleteBook,
-            'saveBook': saveBook
+            'saveBook': saveBook,
+            'updateBook': updateBook
         };
         return service;
 
@@ -31,6 +33,21 @@
         }
 
         /**
+         * getOneBook
+         *
+         * Function that return one book by an id
+         *
+         * @access public
+         * @author Hebert Albertin
+         * @since  04/2018
+         * @return array data (data)
+         */
+        function getOneBook(id) {
+            //Call API
+            return callApi('data/' + id);
+        }
+
+        /**
          * deleteBook
          *
          * Function that delete a book
@@ -46,7 +63,7 @@
         }
 
         /**
-         * deleteBook
+         * saveBook
          *
          * Function that saves a book
          *
@@ -58,6 +75,21 @@
         function saveBook(data) {
             //Call API
             return callApi('data', 'POST', data);
+        }
+
+        /**
+         * updateBook
+         *
+         * Function that updates a book by id
+         *
+         * @access public
+         * @author Hebert Albertin
+         * @since  04/2018
+         * @return void
+         */
+        function updateBook(data, id) {
+            //Call API
+            return callApi('data/' + id, 'PUT', data);
         }
 
         /**

@@ -191,6 +191,7 @@
     <Content Include="App_Data\Livraria_log.ldf">
       <DependentUpon>Livraria.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\Angular\livro.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -215,9 +216,12 @@
     <Content Include="Scripts\Angular\app\app.constants.js" />
     <Content Include="Scripts\Angular\app\app.js" />
     <Content Include="Scripts\Angular\app\directives\confirm-action-click.directive.js" />
+    <Content Include="Scripts\Angular\app\directives\input-required\input-required.directive.html" />
+    <Content Include="Scripts\Angular\app\directives\input-required\input-required.directive.js" />
     <Content Include="Scripts\Angular\app\factories\api-call.factory.js" />
+    <Content Include="Scripts\Angular\livro\controllers\livro-form.controller.js" />
     <Content Include="Scripts\Angular\livro\livro.config.js" />
-    <Content Include="Scripts\Angular\livro\livro.controller.js" />
+    <Content Include="Scripts\Angular\livro\controllers\livro.controller.js" />
     <Content Include="Scripts\Angular\livro\livro.module.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -257,6 +261,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <None Include="Views\Livro\Index.cshtml" />
+    <Content Include="Views\Livro\NovoLivro.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
